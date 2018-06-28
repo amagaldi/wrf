@@ -14,7 +14,7 @@ qlogin -pe openmp 20
 
 module load intel-compiler/ps-xe-2018 
 
-module load wrf-wps/3.8.1
+module load wrf-wps/icc/2018/3.8.1
 
 module load netcdf/gcc/64/4.3.3.1
 
