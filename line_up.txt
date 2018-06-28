@@ -12,7 +12,7 @@ qstat -u "*" (Ver cuantos jobs hay ahora)
 qlogin -pe openmp 20
 
 
-intel-compiler/ps-xe-2018 
+module load intel-compiler/ps-xe-2018 
 
 module load wrf-wps/3.8.1
 
