@@ -12,5 +12,5 @@ ncl plotgrids_new.ncl  (plot dominios)
 cd /storage/heyej/Build_WRF/WRF/test/em_real
 ln -sf ../../../WPS/met_em* /storage/heyej/Build_WRF/WRF/test/em_real
 ulimit -s unlimited
-mpirun -np 2  ./real.exe
+./real.exe
 mpirun -np 20  ./wrf.exe
