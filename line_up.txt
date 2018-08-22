@@ -1,55 +1,16 @@
-ssh -Y tuusuario@ada.lavis.unam.mx
-
-
-::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-
-/mnt/MD1200A : 
-
-
-qstat -u "*" (Ver cuantos jobs hay ahora)
-
-
-qlogin -pe openmp 20
-
-
-module load intel-compiler/ps-xe-2018 
-
-module load wrf-wps/icc/2018/3.8.1
-
-module load netcdf/gcc/64/4.3.3.1
-
-module load hdf5/1.6.10 
-
-
-cd /mnt/MD1200A/amagaldi/jose/WPS/
-
-Extra
-
-cd /mnt/MD1200A/amagaldi/WRFV3/test/em_real
-
-
-
- ./geogrid.exe
-
-./link_grib.csh ../data_temp/fnl_2013*
-
-
+cd /storage/heyej/Build_WRF/WPS/
+./geogrid.exe
+./link_grib.csh ../data_temp/fnl_2016*
 ./ungrib.exe   
 
 ./avg_tsfc.exe  (hot lakes)
 
 ./metgrid.exe
 
- Ncl plotgrids_new.ncl  (plot dominios)  
+ncl plotgrids_new.ncl  (plot dominios) 
 
- cd  ../WRFV3/test/em_real/
-
-ln -sf ../../../WPS/met_em* .
-
+cd //storage/heyej/Build_WRF/WRF/test/em_real
+ln -sf ../../../WPS/met_em* /storage/heyej/Build_WRF/WRF/test/em_real
 ulimit -s unlimited
-
 mpirun -np 2  ./real.exe
-
 mpirun -np 20  ./wrf.exe
-
-
