@@ -1,6 +1,6 @@
 cd /storage/heyej/Build_WRF/WPS/
 ./geogrid.exe
-./link_grib.csh ../data_temp/fnl_2016*
+./link_grib.csh ../DATA/fnl_2016*
 ./ungrib.exe   
 
 ./avg_tsfc.exe  (hot lakes)
