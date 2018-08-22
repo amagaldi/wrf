@@ -46,6 +46,7 @@ cd /mnt/MD1200A/amagaldi/WRFV3/test/em_real
 
 ln -sf ../../../WPS/met_em* .
 
+ulimit -s unlimited
 
 mpirun -np 2  ./real.exe
 
