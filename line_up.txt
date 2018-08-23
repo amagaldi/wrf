@@ -1,6 +1,7 @@
 cd /storage/heyej/Build_WRF/WPS/
 ./geogrid.exe
 ./link_grib.csh ../DATA/fnl_2016*
+ln -sf ungrib/Variable_Tables/Vtable.GFS Vtable
 ./ungrib.exe   
 
 ./avg_tsfc.exe  (hot lakes)
