@@ -1,3 +1,6 @@
+cat etc/hosts
+ssh compute-0-0
+
 cd /storage/heyej/Build_WRF/WPS/
 ./geogrid.exe
 
@@ -6,9 +9,6 @@ cd /storage/heyej/Build_WRF/WPS/
 
 ln -sf ungrib/Variable_Tables/Vtable.GFS Vtable
 ./ungrib.exe   
-
-cat etc/hosts
-ssh compute-0-0
 
 !./avg_tsfc.exe  (hot lakes)
 
