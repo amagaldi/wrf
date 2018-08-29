@@ -1,4 +1,4 @@
-cat etc/hosts
+cat /etc/hosts
 ssh compute-0-0
 
 cd /storage/heyej/Build_WRF/WPS/
