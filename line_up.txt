@@ -1,7 +1,7 @@
 cat /etc/hosts
 ssh compute-0-0
 
-cd /storage/heyej/Build_WRF/WPS/
+cd /share/storage/heyej/Build_WRF/WPS/
 ./geogrid.exe
 
 ./link_grib.csh ../DATA/fnl_2013*
@@ -16,7 +16,7 @@ ln -sf ungrib/Variable_Tables/Vtable.GFS Vtable
 
 ncl plotgrids_new.ncl  (plot dominios) 
 
-cd /storage/heyej/Build_WRF/WRF/test/em_real
+cd /share/storage/heyej/Build_WRF/WRF/test/em_real
 ln -sf ../../../WPS/met_em* .
 ulimit -s unlimited
 
