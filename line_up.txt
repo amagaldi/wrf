@@ -17,7 +17,7 @@ ln -sf ungrib/Variable_Tables/Vtable.GFS Vtable
 ncl plotgrids_new.ncl  (plot dominios) 
 
 cd /share/storage/heyej/Build_WRF/WRF/test/em_real
-ln -sf ../../../WPS/met_em* .
+ln -sf ../../../../WPS/met_em* .
 ulimit -s unlimited
 
 mpirun -np 25 ./real.exe
