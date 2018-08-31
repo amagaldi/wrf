@@ -24,8 +24,8 @@ ln -sf ../../../../pruebas-WPS/febrero/met_em* .
 ulimit -s unlimited
 
 
-qsub -pe mpi 24 real.sh
-qsub -pe mpi 25 wrf.sh
+qsub -pe mpi 25 real.sh
+qsub -pe mpi 24 wrf.sh
 
 #mpirun -np 25 ./real.exe
 #mpirun -np 24  ./wrf.exe
