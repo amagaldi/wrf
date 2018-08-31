@@ -1,24 +1,29 @@
-cat /etc/hosts
-ssh compute-0-0
+#cat /etc/hosts
+#ssh compute-0-0
 
 cd /share/storage/heyej/Build_WRF/WPS/
 ./geogrid.exe
 
-./link_grib.csh ../DATA/fnl_2013*
+#Enlazar fechas
 ./link_grib.csh ../DATA/fnl_20130101_* ../DATA/fnl_20130102_*
 
 ln -sf ungrib/Variable_Tables/Vtable.GFS Vtable
 ./ungrib.exe   
 
-!./avg_tsfc.exe  (hot lakes)
+#./avg_tsfc.exe  (hot lakes)
 
 ./metgrid.exe
 
-ncl plotgrids_new.ncl  (plot dominios) 
+#ncl plotgrids_new.ncl  (plot dominios) 
 
-cd /share/storage/heyej/Build_WRF/WRF/test/em_real
+#Directorio de la fecha!
+cd /share/storage/heyej/Build_WRF/pruebas-WRF/...
 ln -sf ../../../../WPS/met_em* .
 ulimit -s unlimited
 
-mpirun -np 25 ./real.exe
-mpirun -np 24  ./wrf.exe
+
+qsub -pe mpi 24 real.sh
+qsub -pe mpi 25 wrf.sh
+
+#mpirun -np 25 ./real.exe
+#mpirun -np 24  ./wrf.exe
