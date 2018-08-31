@@ -20,6 +20,7 @@ ln -sf ungrib/Variable_Tables/Vtable.GFS Vtable
 #Directorio de la fecha!
 cd /share/storage/heyej/Build_WRF/pruebas-WRF/...
 ln -sf ../../../../WPS/met_em* .
+ln -sf ../../../../pruebas-WPS/febrero/met_em* .
 ulimit -s unlimited
 
 
