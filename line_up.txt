@@ -5,7 +5,7 @@ cd /share/storage/heyej/Build_WRF/WPS/
 ./geogrid.exe
 
 #Enlazar fechas
-./link_grib.csh ../DATA/fnl_20130101_* ../DATA/fnl_20130102_*
+./link_grib.csh ../DATA/fnl_20160101_* ../DATA/fnl_20160102_*
 
 ln -sf ungrib/Variable_Tables/Vtable.GFS Vtable
 ./ungrib.exe   
