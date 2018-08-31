@@ -6,6 +6,7 @@ cd /share/storage/heyej/Build_WRF/WPS/
 
 #Enlazar fechas
 ./link_grib.csh ../DATA/fnl_20160101_* ../DATA/fnl_20160102_*
+./link_grib.csh ../../DATA/fnl_201602* ../../DATA/fnl_20160301*
 
 ln -sf ungrib/Variable_Tables/Vtable.GFS Vtable
 ./ungrib.exe   
